@@ -16,7 +16,7 @@ def LogIN():
          messagebox.showerror("ERROR","Please Enter Name or Email and Passsword")
       check=cs.DataBase()
       check.Store()
-
+      
       check2=cs.Check()
       check2.Store_()
       if '@gmail.com' in NameEmail:
@@ -57,6 +57,8 @@ def main():
          if Name == "" or Email == "" or Password == "":
              messagebox.showerror('Error', 'Please Enter Name, Email, and Password')
              return
+         Insiate=cs.SignUp('','','')
+         Insiate.file()   
          CheckIn=cs.DataBase()
          CheckIn.Store()
          if Name in CheckIn.lis1:
